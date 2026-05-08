@@ -1,0 +1,36 @@
+{
+  "name": "tactika",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "next telemetry disable || true"
+  },
+  "dependencies": {
+    "@vercel/postgres": "^0.9.0",
+    "bcryptjs": "^2.4.3",
+    "classnames": "^2.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "next": "15.0.0",
+    "next-themes": "^0.3.0",
+    "openai": "^4.28.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "stripe": "^16.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "22.0.0",
+    "@types/react": "18.3.4",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "typescript": "5.4.5"
+  }
+}
