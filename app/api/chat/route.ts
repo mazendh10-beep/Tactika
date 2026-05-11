@@ -3,18 +3,24 @@ import OpenAI from "openai";
 import { getSession } from "@/lib/auth";
 import { lessons, positions, formations } from "@/data/content";
 
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
   const question = body?.question as string | undefined;
   const match = body?.match as { opponent?: string; league?: string; gameState?: string } | undefined;
 
+  if (!process.env.OPENAI_API_KEY) {
+    return NextResponse.json({
+      answer: "AI coach coming soon. Upgrade to premium to be first in line."
+    });
+  }
+
+  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
   if (!question) {
     return NextResponse.json({ error: "Question is required" }, { status: 400 });
   }
 
-  const session = getSession();
+  const session = await getSession();
   if (!session?.isPremium) {
     return NextResponse.json({ error: "Premium required" }, { status: 403 });
   }

@@ -3,7 +3,7 @@ import { lessons } from "@/data/content";
 import { getSession } from "@/lib/auth";
 
 export async function GET() {
-  const session = getSession();
+  const session = await getSession();
   const isPremium = session?.isPremium ?? false;
 
   const filtered = lessons.filter((l) => l.type === "free" || isPremium);

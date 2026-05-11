@@ -1,4 +1,28 @@
-export const formations = [
+type Access = "free" | "premium";
+
+type Formation = {
+  name: string;
+  access: Access;
+  summary: string;
+};
+
+type Position = {
+  role: string;
+  label: string;
+  zone: string;
+  access: Access;
+  slug: string;
+};
+
+type Lesson = {
+  title: string;
+  category: "formations" | "positions" | "history";
+  type: Access;
+  difficulty: "Beginner" | "Intermediate" | "Advanced";
+  content: string;
+};
+
+export const formations: Formation[] = [
   { name: "4-3-3", access: "free", summary: "High press, width with wide forwards" },
   { name: "4-4-2", access: "free", summary: "Compact mid/low block, twin strikers" },
   { name: "3-5-2", access: "premium", summary: "Central overloads + wingback width" },
@@ -6,7 +30,7 @@ export const formations = [
   { name: "2-3-5", access: "premium", summary: "WM shape to overload and isolate" }
 ];
 
-export const positions = [
+export const positions: Position[] = [
   { role: "GK", label: "Goalkeeper", zone: "Sweeper-keeper, claim crosses, start build", access: "free", slug: "gk-role" },
   { role: "LB", label: "Left Back", zone: "Wide defender; overlaps/underlaps", access: "free", slug: "lb-role" },
   { role: "LCB", label: "Left Center Back", zone: "Cover + progressive diagonal passes", access: "free", slug: "lcb-role" },
@@ -21,7 +45,7 @@ export const positions = [
   { role: "WB", label: "Wing Back", zone: "Two-way wide engine in back three", access: "free", slug: "wb-role" }
 ];
 
-export const lessons = [
+export const lessons: Lesson[] = [
   {
     title: "Pressing Triggers 101",
     category: "formations",

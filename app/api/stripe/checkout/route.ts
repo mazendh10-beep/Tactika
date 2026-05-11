@@ -3,7 +3,13 @@ import { stripe } from "@/lib/stripe";
 import { getSession } from "@/lib/auth";
 
 export async function POST() {
-  const session = getSession();
+  if (!process.env.STRIPE_SECRET_KEY) {
+    return NextResponse.json({
+      error: "Payments coming soon"
+    }, { status: 503 });
+  }
+
+  const session = await getSession();
   if (!session) {
     return NextResponse.json({ error: "Not authenticated" }, { status: 401 });
   }

@@ -18,8 +18,9 @@ export function signSession(payload: { id: string; email: string; isPremium: boo
   return jwt.sign(payload, JWT_SECRET, { expiresIn: "7d" });
 }
 
-export function setSessionCookie(token: string) {
-  cookies().set({
+export async function setSessionCookie(token: string) {
+  const cookieStore = await cookies();
+  cookieStore.set({
     name: COOKIE_NAME,
     value: token,
     httpOnly: true,
@@ -30,12 +31,14 @@ export function setSessionCookie(token: string) {
   });
 }
 
-export function clearSessionCookie() {
-  cookies().delete(COOKIE_NAME);
+export async function clearSessionCookie() {
+  const cookieStore = await cookies();
+  cookieStore.delete(COOKIE_NAME);
 }
 
-export function getSession() {
-  const token = cookies().get(COOKIE_NAME)?.value;
+export async function getSession() {
+  const cookieStore = await cookies();
+  const token = cookieStore.get(COOKIE_NAME)?.value;
   if (!token) return null;
   try {
     return jwt.verify(token, JWT_SECRET) as { id: string; email: string; isPremium: boolean };

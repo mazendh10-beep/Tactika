@@ -9,6 +9,12 @@ const schema = z.object({
 });
 
 export async function POST(request: Request) {
+  if (!process.env.POSTGRES_URL) {
+    return NextResponse.json({
+      error: "Auth coming soon"
+    }, { status: 503 });
+  }
+
   const body = await request.json().catch(() => null);
   const parsed = schema.safeParse(body);
   if (!parsed.success) {
@@ -33,7 +39,7 @@ export async function POST(request: Request) {
       isPremium: res.rows[0].ispremium as boolean
     });
 
-    setSessionCookie(token);
+    await setSessionCookie(token);
     return NextResponse.json({ message: "Signed up" }, { status: 201 });
   } catch (error) {
     console.error(error);
