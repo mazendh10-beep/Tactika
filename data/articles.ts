@@ -1,3 +1,5 @@
+import { formationArticleContent } from "./formation-articles";
+
 export type Article = {
   slug: string;
   title: string;
@@ -9,13 +11,44 @@ export type Article = {
 
 export const articles: Article[] = [
   {
-    slug: "why-4-3-3-dominates-pressing",
-    title: "Why 4-3-3 dominates pressing eras",
+    slug: "4-3-3",
+    title: "The 4-3-3: The Possession Powerhouse",
     type: "free",
     category: "formations",
-    summary: "Fullbacks form the trap, six presses cover shadow, eights jump when the ball goes wide.",
-    content:
-      "Press from the 4-3-3 starts when the ball hits the CB's weak foot on a back pass—the near winger curves the run to cut the return lane while the striker screens the pivot. The six sits on the half-turn to the ball-side, and the far eight steps to the touchline only after the pass is trapped wide. Fullbacks jump once the winger shows inside, springing a 2v1 trap; the trade-off is space behind if the six doesn't hold the central lane."
+    summary: "Four defenders, a midfield trio, and wide forwards built for possession and pressing.",
+    content: formationArticleContent["4-3-3"]
+  },
+  {
+    slug: "4-2-3-1",
+    title: "The 4-2-3-1: The Modern Default",
+    type: "free",
+    category: "formations",
+    summary: "Double pivot stability with an attacking trio behind a lone striker.",
+    content: formationArticleContent["4-2-3-1"]
+  },
+  {
+    slug: "4-4-2",
+    title: "The 4-4-2: The Classic Blueprint",
+    type: "free",
+    category: "formations",
+    summary: "Two flat banks of four with a strike partnership — simplicity and compactness.",
+    content: formationArticleContent["4-4-2"]
+  },
+  {
+    slug: "3-5-2",
+    title: "The 3-5-2: The Wing-Back Wonder",
+    type: "free",
+    category: "formations",
+    summary: "Back three, wing-back width, and midfield overload with two strikers.",
+    content: formationArticleContent["3-5-2"]
+  },
+  {
+    slug: "3-4-3",
+    title: "The 3-4-3: The Attacking Evolution",
+    type: "free",
+    category: "formations",
+    summary: "Back three with a front three — width and attacking pressure across the pitch.",
+    content: formationArticleContent["3-4-3"]
   },
   {
     slug: "rebirth-of-the-wm",
