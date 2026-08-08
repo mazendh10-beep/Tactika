@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import Link from "next/link";
 import { cookies } from "next/headers";
-import { notFound } from "next/navigation";
-=======
->>>>>>> 7f640e5e32e87e1656cfec0dce3a590c8f24bb31
 import PaywallBadge from "@/components/paywall-badge";
 import { getSessionFromCookies } from "@/lib/auth";
 import { articles } from "@/data/articles";
@@ -33,14 +28,11 @@ export default async function ArticlePage({ params }: Props) {
   const article = articles.find((item) => item.slug === slug);
   if (!article) return notFound();
 
-<<<<<<< HEAD
   const cookieStore = await cookies();
   const session = await getSessionFromCookies(cookieStore);
   const isLocked = article.type === "premium" && !session?.isPremium;
   const paragraphs = article.content.split("\n").filter(Boolean);
 
-=======
->>>>>>> 7f640e5e32e87e1656cfec0dce3a590c8f24bb31
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 space-y-6">
       <Link href="/articles" className="text-sm text-accent hover:underline">
@@ -81,15 +73,8 @@ export default async function ArticlePage({ params }: Props) {
             </div>
           </div>
         ) : (
-<<<<<<< HEAD
-          <div className="space-y-3 text-neutral-700 dark:text-neutral-200 leading-relaxed">
-            {paragraphs.map((paragraph, idx) => (
-              <p key={idx}>{paragraph}</p>
-            ))}
-=======
           <div className="space-y-4 text-neutral-700 dark:text-neutral-200 leading-relaxed [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-primary-dark [&_h3]:dark:text-white [&_h3]:mt-6 [&_h3]:mb-2 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1 [&_pre]:rounded-xl [&_pre]:bg-neutral-100 [&_pre]:dark:bg-neutral-800 [&_pre]:p-4 [&_pre]:text-sm [&_pre]:font-mono [&_pre]:overflow-x-auto [&_strong]:font-semibold [&_p]:leading-relaxed">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{article.content}</ReactMarkdown>
->>>>>>> 7f640e5e32e87e1656cfec0dce3a590c8f24bb31
           </div>
         )}
       </article>
