@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Navbar />
             <main className="flex-1">{children}</main>
             <footer className="border-t border-neutral-200 dark:border-neutral-800 py-8 text-sm text-center text-neutral-500">
-              © {new Date().getFullYear()} Tactika. All rights reserved.
+              (c) {new Date().getFullYear()} Tactika. All rights reserved.
             </footer>
           </div>
         </ThemeProvider>

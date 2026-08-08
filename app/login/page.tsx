@@ -1,8 +1,10 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function LoginPage() {
+  const router = useRouter();
   const [status, setStatus] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -18,7 +20,7 @@ export default function LoginPage() {
     });
     const data = await res.json();
     setStatus(data.message || data.error);
-    if (res.ok) window.location.href = "/";
+    if (res.ok) router.push("/account");
   };
 
   return (

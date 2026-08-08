@@ -11,7 +11,8 @@ const navLinks = [
   { href: "/positions", label: "Positions" },
   { href: "/formations", label: "Formations" },
   { href: "/articles", label: "Articles" },
-  { href: "/history", label: "History" }
+  { href: "/history", label: "History" },
+  { href: "/chat", label: "Coach" }
 ];
 
 export default function Navbar() {
@@ -60,6 +61,12 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <Link
+            href="/account"
+            className="rounded-full border border-neutral-300 dark:border-neutral-700 px-4 py-2 text-sm"
+          >
+            Account
+          </Link>
+          <Link
             href="/login"
             className="rounded-full border border-neutral-300 dark:border-neutral-700 px-4 py-2 text-sm"
           >
@@ -76,6 +83,12 @@ export default function Navbar() {
       </nav>
       {open && (
         <div className="md:hidden px-4 pb-4 flex items-center gap-3">
+          <Link
+            href="/account"
+            className="rounded-full border border-neutral-300 dark:border-neutral-700 px-4 py-2 text-sm w-full text-center"
+          >
+            Account
+          </Link>
           <Link
             href="/login"
             className="rounded-full border border-neutral-300 dark:border-neutral-700 px-4 py-2 text-sm w-full text-center"

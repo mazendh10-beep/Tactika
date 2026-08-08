@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import OpenAI from "openai";
-import { getSession } from "@/lib/auth";
+import { getSessionFromCookies } from "@/lib/auth";
 import { lessons, positions, formations } from "@/data/content";
 
 export async function POST(request: Request) {
@@ -20,7 +21,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Question is required" }, { status: 400 });
   }
 
-  const session = await getSession();
+  const cookieStore = await cookies();
+  const session = await getSessionFromCookies(cookieStore);
   if (!session?.isPremium) {
     return NextResponse.json({ error: "Premium required" }, { status: 403 });
   }
