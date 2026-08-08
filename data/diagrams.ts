@@ -79,5 +79,18 @@ export const formationDiagrams: Record<string, PitchPlayer[]> = {
     { label: "ST", x: 50, y: 42 },
     { label: "R10", x: 62, y: 46 },
     { label: "RW", x: 76, y: 46 }
+  ],
+  "4-2-3-1": [
+    { label: "GK", x: 50, y: 92 },
+    { label: "LB", x: 20, y: 78 },
+    { label: "LCB", x: 38, y: 80 },
+    { label: "RCB", x: 62, y: 80 },
+    { label: "RB", x: 80, y: 78 },
+    { label: "DM", x: 44, y: 68 },
+    { label: "8", x: 56, y: 58 },
+    { label: "LW", x: 26, y: 44 },
+    { label: "AM", x: 50, y: 46 },
+    { label: "RW", x: 74, y: 44 },
+    { label: "ST", x: 50, y: 30 }
   ]
 };
