@@ -25,6 +25,7 @@ type Lesson = {
 export const formations: Formation[] = [
   { name: "4-3-3", access: "free", summary: "High press, width with wide forwards" },
   { name: "4-4-2", access: "free", summary: "Compact mid/low block, twin strikers" },
+  { name: "4-2-3-1", access: "free", summary: "Double pivot stability, #10 link, lone striker" },
   { name: "3-5-2", access: "premium", summary: "Central overloads + wingback width" },
   { name: "3-2-5", access: "premium", summary: "Positional play, rest-defense spine" },
   { name: "2-3-5", access: "premium", summary: "WM shape to overload and isolate" }

@@ -15,7 +15,7 @@ export const articles: Article[] = [
     category: "formations",
     summary: "Fullbacks form the trap, six presses cover shadow, eights jump when the ball goes wide.",
     content:
-      "The 4-3-3 is built for modern pressing because the front three can lock a back four while the six screens the pivot lane. Eights press out to wide build-up, forcing play into the sideline. Fullbacks step high to spring traps, and center backs hold a high line for short recoveries."
+      "Press from the 4-3-3 starts when the ball hits the CB's weak foot on a back pass—the near winger curves the run to cut the return lane while the striker screens the pivot. The six sits on the half-turn to the ball-side, and the far eight steps to the touchline only after the pass is trapped wide. Fullbacks jump once the winger shows inside, springing a 2v1 trap; the trade-off is space behind if the six doesn't hold the central lane."
   },
   {
     slug: "rebirth-of-the-wm",
@@ -42,7 +42,7 @@ export const articles: Article[] = [
     category: "history",
     summary: "From Sacchi's 4-4-2 to Klopp's gegenpress, winning the ball in 5 seconds.",
     content:
-      "Sacchi compressed space with a 4-4-2 block that hunted short immediately after loss. Klopp heightened the risk: trigger heavy counter-pressing from a 4-3-3, accepting space behind but betting on timing and numbers around the ball. Both hinge on compact lines and forward body orientation."
+      "Sacchi's 4-4-2 counter-pressed on the first backward pass to a CB—both strikers pinched the center backs while the wide mids closed the fullback's first touch. Klopp's gegenpress triggers on a heavy touch or loose second ball within five seconds of loss, with the 4-3-3 front three funneling play to one side. The trade-off is identical: compact lines recover the ball fast, but a single missed tackle leaves the high line exposed to a direct run in behind."
   },
   {
     slug: "role-glossary-modern-winger",
@@ -62,7 +62,7 @@ export const articles: Article[] = [
     category: "positions",
     summary: "Sweeper-keeper angles, claiming crosses, and starting build-up cleanly.",
     content:
-      "Modern GKs defend depth by sweeping behind a high line and narrow passing lanes with body shape. On the ball they create a 3v2 in first build-up, splitting center backs and playing firm passes to the six. Cross claims and starting attacks with throws add hidden xT."
+      "On a goal kick, the GK splits the back line at a 45° angle to create a 3v2—one CB drops short, the other holds width, and the six shows between them. Sweeper-keeper duties trigger when a through ball beats the line by more than 8 yards; the GK must arrive before the striker, not level. Cross claims come on inswingers to the near post at 6–8 yards—if the ball stays flat or wide, stay on the line and let the CB attack it."
   },
   {
     slug: "lb-role",
@@ -71,7 +71,7 @@ export const articles: Article[] = [
     category: "positions",
     summary: "Wide defender who times overlaps and controls the channel.",
     content:
-      "The LB provides width in early build but must balance underlaps when the winger stays wide. Defensively they screen the half-space and delay 1v1s toward touch. When in a back three in possession, they form the wide CB to secure rest-defense."
+      "The LB overlaps when the winger receives on the touchline with a closed body shape—timing the run to arrive as the winger drives inside, not before. Underlap instead when the winger stays wide and the half-space is open; the LB cuts at a 30° angle toward the penalty spot. Defensively, delay 1v1s by showing the attacker outside and jockeying at arm's length; only commit when the winger has dropped to cover the channel."
   },
   {
     slug: "lcb-role",
@@ -80,7 +80,7 @@ export const articles: Article[] = [
     category: "positions",
     summary: "Steps out to break lines and covers depth behind LB rotations.",
     content:
-      "LCB angles progressive diagonals into the left half-space and steps into midfield to create a plus-one when the six is marked. Defensively they track channel runs when the fullback presses, keeping the line compact while covering the keeper."
+      "The LCB steps into midfield when the six is marked and the pivot lane is blocked—receive on the back foot at a 45° angle to the left half-space, then play a diagonal into the winger's feet or the overlapping LB. Defensively, track channel runs when the LB presses high; hold a flat line with the RCB but stay half a step deeper if the opponent's striker drifts left. Progressive carries beat a low block only when the first pass after the carry splits two lines."
   },
   {
     slug: "rcb-role",
@@ -89,7 +89,7 @@ export const articles: Article[] = [
     category: "positions",
     summary: "Carries to provoke, then switches to the far side.",
     content:
-      "The RCB invites pressure with carries, then hits flat switches to the opposite fullback or winger. Communication with the pivot is key to avoid exposing the half-space. On transitions they delay and funnel wide to buy time for midfield recovery."
+      "The RCB carries to provoke a press trigger—two or three steps toward the winger, then hit a flat switch to the far fullback on the outside shoulder. The switch only works if the pivot has shifted ball-side; otherwise the half-space is exposed. On transitions, delay by showing the attacker wide at a 45° angle and funneling toward touch, buying 2–3 seconds for the six to recover central."
   },
   {
     slug: "rb-role",
@@ -98,7 +98,7 @@ export const articles: Article[] = [
     category: "positions",
     summary: "Chooses overlap vs invert based on winger profile and press cues.",
     content:
-      "RBs support circulation by stepping inside against low blocks, creating central overloads. Against high presses they stay wider to receive on the outside shoulder. Defensive tasks include pressing trigger on opponent LW first touch and covering far-post crosses."
+      "Against a low block the RB inverts into the half-space when the winger pins the fullback wide—receive between the lines at a 45° angle and play the third-man run. Against a high press, stay wide on the outside shoulder; the trigger to press the opponent LW is a heavy first touch backward. Overlap only when the winger cuts inside on a closed body; underlap when the winger stays touchline and the channel is open behind."
   },
   {
     slug: "dm-role",
@@ -107,7 +107,7 @@ export const articles: Article[] = [
     category: "positions",
     summary: "Screens central lanes, sets tempo, and plugs counters.",
     content:
-      "The DM positions to see both ball and striker, cutting the direct pass. On the ball, they offer constant support triangles and tempo control with one- and two-touch play. In rest-defense they hold the central column, preventing split passes and delaying counters."
+      "The DM sits on the ball-striker axis at roughly 12 yards, cutting the direct pass through the center while keeping both in peripheral view. On the ball, offer a back-foot option at a 45° angle to the nearest CB—one-touch to the eight or a clipped switch if the press shifts. In rest-defense, hold the central column when fullbacks push; the trade-off is leaving the pivot unmarked if you step to the ball-side too early."
   },
   {
     slug: "cm-role",
@@ -116,7 +116,7 @@ export const articles: Article[] = [
     category: "positions",
     summary: "Links thirds, resists press, and balances width vs depth.",
     content:
-      "CMs receive on the half-turn, connect fullbacks and forwards, and time third-man runs. They must sense when to drop to form a double pivot and when to step high to press. Body orientation opens multiple lanes to escape pressure."
+      "The CM receives on the half-turn with the back foot facing the sideline—open body to see the fullback, the six, and the forward line in one scan. Drop to form a double pivot when the opponent's #10 sits between the lines; step high to press when the trigger is a backward pass to a CB. Third-man runs arrive from the blind side of the marker, timed off the winger's first touch, not before."
   },
   {
     slug: "am-role",
@@ -161,6 +161,6 @@ export const articles: Article[] = [
     category: "positions",
     summary: "Acts as wide outlet in possession and auxiliary fullback in defense.",
     content:
-      "Wing backs give width in a back three, arriving high for cut-backs while ensuring recovery sprints on turnovers. They choose underlaps when the winger pins the fullback, and must coordinate with the near-side CB to lock the channel when pressing."
+      "The wing back arrives high for cut-backs when the winger pins the fullback and drives to the byline—aim for the six-yard box at a 15° angle from the corner. Underlap when the winger stays wide and the half-space opens; the WB cuts inside at the top of the box, not at the edge of the area. On turnovers, the recovery sprint is to the near-post channel first—cover shadow for the CB, then press the ball if numbers allow."
   }
 ];
