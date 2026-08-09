@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { formations, positions } from "@/data/content";
 import PaywallBadge from "@/components/paywall-badge";
+import PitchDiagram from "@/components/pitch-diagram";
+import { formations, positions } from "@/data/content";
+import { formationDiagrams } from "@/data/diagrams";
 
 export default function HomePage() {
   return (
@@ -43,78 +45,10 @@ export default function HomePage() {
       <section className="mb-12">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-2xl font-semibold">Minimalist Tactical Board</h2>
-          <span className="text-sm text-neutral-500">Blue vs. Magenta</span>
+          <span className="text-sm text-neutral-500">4-2-3-1</span>
         </div>
         <div className="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-[0_18px_36px_rgba(15,23,42,0.08)] p-6">
-          <svg
-            viewBox="0 0 105 68"
-            role="img"
-            aria-label="Top-down football pitch with two teams"
-            className="w-full h-auto"
-          >
-            <defs>
-              <style>{`
-                .pitch-line { fill: none; stroke: #d6d9df; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
-                .spot { fill: #cbd0d8; }
-                .player { stroke: #ffffff; stroke-width: 0.35; filter: drop-shadow(0 2px 3px rgba(15,23,42,0.08)); }
-                .team-a { fill: #2563eb; }
-                .team-b { fill: #e11d48; }
-                .keeper { stroke-width: 0.6; }
-              `}</style>
-            </defs>
-
-            {/* Pitch outline */}
-            <rect x="0.7" y="0.7" width="103.6" height="66.6" className="pitch-line" rx="1.8" ry="1.8" />
-            <line x1="52.5" y1="0.7" x2="52.5" y2="67.3" className="pitch-line" />
-            <circle cx="52.5" cy="34" r="9.15" className="pitch-line" />
-            <circle cx="52.5" cy="34" r="0.6" className="spot" />
-
-            {/* Left penalty area */}
-            <rect x="0.7" y="13.85" width="16.5" height="40.3" className="pitch-line" />
-            <rect x="0.7" y="24.85" width="5.5" height="18.3" className="pitch-line" />
-            <circle cx="11" cy="34" r="0.6" className="spot" />
-            <path d="M20.15 24.85 A9.15 9.15 0 0 0 20.15 43.15" className="pitch-line" />
-
-            {/* Right penalty area */}
-            <rect x="87.8" y="13.85" width="16.5" height="40.3" className="pitch-line" />
-            <rect x="98.8" y="24.85" width="5.5" height="18.3" className="pitch-line" />
-            <circle cx="94" cy="34" r="0.6" className="spot" />
-            <path d="M84.85 24.85 A9.15 9.15 0 0 1 84.85 43.15" className="pitch-line" />
-
-            {/* Corner arcs */}
-            <path d="M0.7 6.7 A6 6 0 0 0 6.7 0.7" className="pitch-line" />
-            <path d="M98.3 0.7 A6 6 0 0 0 104.3 6.7" className="pitch-line" />
-            <path d="M0.7 61.3 A6 6 0 0 1 6.7 67.3" className="pitch-line" />
-            <path d="M98.3 67.3 A6 6 0 0 1 104.3 61.3" className="pitch-line" />
-
-            {/* Team A (blue) */}
-            <g className="team-a">
-              <circle cx="10" cy="12" r="1.6" className="player" />
-              <circle cx="10" cy="56" r="1.6" className="player" />
-              <circle cx="20" cy="22" r="1.6" className="player" />
-              <circle cx="20" cy="46" r="1.6" className="player" />
-              <circle cx="33" cy="34" r="1.7" className="player" />
-              <circle cx="36" cy="18" r="1.6" className="player" />
-              <circle cx="36" cy="50" r="1.6" className="player" />
-              <circle cx="48" cy="26" r="1.6" className="player" />
-              <circle cx="48" cy="42" r="1.6" className="player" />
-              <circle cx="58" cy="34" r="1.8" className="player keeper" />
-            </g>
-
-            {/* Team B (magenta) */}
-            <g className="team-b">
-              <circle cx="95" cy="12" r="1.6" className="player" />
-              <circle cx="95" cy="56" r="1.6" className="player" />
-              <circle cx="85" cy="22" r="1.6" className="player" />
-              <circle cx="85" cy="46" r="1.6" className="player" />
-              <circle cx="72" cy="34" r="1.7" className="player" />
-              <circle cx="69" cy="18" r="1.6" className="player" />
-              <circle cx="69" cy="50" r="1.6" className="player" />
-              <circle cx="57" cy="26" r="1.6" className="player" />
-              <circle cx="57" cy="42" r="1.6" className="player" />
-              <circle cx="47" cy="34" r="1.8" className="player keeper" />
-            </g>
-          </svg>
+          <PitchDiagram players={formationDiagrams["4-2-3-1"]} />
         </div>
       </section>
 
