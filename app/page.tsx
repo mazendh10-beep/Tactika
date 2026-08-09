@@ -48,7 +48,7 @@ export default function HomePage() {
           <span className="text-sm text-neutral-500">4-2-3-1</span>
         </div>
         <div className="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-[0_18px_36px_rgba(15,23,42,0.08)] p-6">
-          <PitchDiagram players={formationDiagrams["4-2-3-1"]} />
+          <PitchDiagram players={formationDiagrams["4-2-3-1"]} rotate="90" />
         </div>
       </section>
 
