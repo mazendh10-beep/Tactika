@@ -5,7 +5,7 @@ import { formations, positions } from "@/data/content";
 export default function HomePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <section className="grid gap-10 md:grid-cols-2 items-center mb-12">
+      <section className="mb-12 max-w-3xl">
         <div>
           <p className="uppercase tracking-wide text-sm text-accent font-semibold mb-3">Think fast. Play smart.</p>
           <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-6">
@@ -29,14 +29,6 @@ export default function HomePage() {
               Browse Formations
             </Link>
           </div>
-        </div>
-        <div className="relative rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-primary-light/10 via-accent/10 to-transparent p-6">
-          <div className="aspect-video rounded-xl bg-pitch pitch-grid pitch-outline flex items-center justify-center text-center text-white text-3xl font-semibold">
-            Interactive Pitch
-          </div>
-          <p className="mt-4 text-sm text-neutral-500">
-            Visualize build-up lanes, rest-defense cover, and pressing traps in light or dark mode.
-          </p>
         </div>
       </section>
 
