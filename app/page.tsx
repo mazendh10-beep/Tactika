@@ -1,8 +1,6 @@
 import Link from "next/link";
 import PaywallBadge from "@/components/paywall-badge";
-import PitchDiagram from "@/components/pitch-diagram";
 import { formations, positions } from "@/data/content";
-import { formationDiagrams } from "@/data/diagrams";
 
 export default function HomePage() {
   return (
@@ -39,16 +37,6 @@ export default function HomePage() {
           <p className="mt-4 text-sm text-neutral-500">
             Visualize build-up lanes, rest-defense cover, and pressing traps in light or dark mode.
           </p>
-        </div>
-      </section>
-
-      <section className="mb-12">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-2xl font-semibold">Minimalist Tactical Board</h2>
-          <span className="text-sm text-neutral-500">4-2-3-1</span>
-        </div>
-        <div className="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-[0_18px_36px_rgba(15,23,42,0.08)] p-6">
-          <PitchDiagram players={formationDiagrams["4-2-3-1"]} rotate="90" />
         </div>
       </section>
 
